@@ -1,0 +1,46 @@
+//Made by intirama
+#include "Keyboard.h"
+
+void setup() {
+  delay(2000);
+  
+  Keyboard.begin();                       //starting the keyboard
+  
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.releaseAll();
+  delay(500);
+  Keyboard.print("regio en tqql");
+  delay(500);
+  Keyboard.press(KEY_RETURN);             //open language settings for keyboard
+  Keyboard.releaseAll();
+  delay(3000);
+  Keyboard.press(KEY_TAB);
+  Keyboard.releaseAll();
+  delay(1000);
+  Keyboard.press(KEY_RETURN);
+  Keyboard.releaseAll();
+  delay(500);
+  Keyboard.print("Verenigde stqten");     //choosing English
+  delay(2000);
+  Keyboard.press(KEY_TAB);
+  Keyboard.releaseAll();
+  delay(500);
+  Keyboard.press(KEY_RETURN);
+  Keyboard.releaseAll();
+  delay(2000);
+  Keyboard.press(KEY_LEFT_GUI);           //changing language
+  Keyboard.write(32);
+  Keyboard.releaseAll();
+  delay(500);
+  Keyboard.press(KEY_LEFT_GUI);           //hide all tabs
+  Keyboard.write(109);
+  Keyboard.releaseAll();
+
+  Keyboard.end();                         //ending the keyboard
+
+}
+
+void loop() {
+  //put here the ducky script
+
+}
